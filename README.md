@@ -1,16 +1,16 @@
-## University of California - San Diego
-## COGS 120 / CSE 170 (Human-Computer Interaction Design)
-## Fall 2017
-## Section A01 (Wednesdays 10am-11am)
+# University of California - San Diego
+# COGS 120 / CSE 170 (Human-Computer Interaction Design)
+# Fall 2017
+# Section A01 (Wednesdays 10am-11am)
 
-# Group members
+## Group members
 
 Ed Ambing (A12380391), David Chang (A12227329), Joel Ramirez (A12433857)
 
-# Project description
+## Project description
 
 A calendar that displays and prioritizes events created by the user. Maybe we can use the Google Calendar API if we have time?
 
-# Credits
+## Credits
 
 Based on the [Lab 2 Git repo for COGS 120](https://github.com/intro-hci-ucsd/lab2) originally created by Scott Klemmer, Michael Bernstein, and a coalition of TAs. That version, in turn, was modified by Sean Kross from [a forked version](https://github.com/pgbovine/lab2) which incorporates changes from Philip Guo.
