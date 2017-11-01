@@ -2,8 +2,8 @@
 
 // Global variables, the values come from the Developer Console
 // Put your OWN clientID and apiKey
-var clientId = '963034993422-4e9qe121evkv5lmr7nm2csclhp1gt56h.apps.googleusercontent.com';
-var apiKey = 'AIzaSyA2rBMEDBfUqKnTy8lc7AAy_YJtt_rKois';
+var clientId = '778372626385-j7c6vomqimpqkc8l1q0vqfqcum6g2d13.apps.googleusercontent.com';
+var apiKey = 'AIzaSyDsRHcDIgf0WZxvupyGyvZmtNSA6Car9ms';
 var scopes = 'https://www.googleapis.com/auth/calendar';
 
 
