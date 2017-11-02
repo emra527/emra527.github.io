@@ -1,7 +1,18 @@
-/* PART 1 - Authorization and login. */
+/* Filename: calendar_ex.js
+Author: Eni Mustafaraj
+Date: 03/02/2015
+Purpose: Show how to connect to Google Calendar API and perform an
+operation of event creation.
+*/
+
+/* PART 1: This part is more or less lifted as is from Google APIs documentation
+and examples. I have made slight changes to the handleAuthResult function,
+in order to toggle on/off the visibility of two buttons of the user interface.
+*/
 
 // Global variables, the values come from the Developer Console
 // Put your OWN clientID and apiKey
+
 var clientId = '778372626385-j7c6vomqimpqkc8l1q0vqfqcum6g2d13.apps.googleusercontent.com';
 var apiKey = 'AIzaSyDsRHcDIgf0WZxvupyGyvZmtNSA6Car9ms';
 var scopes = 'https://www.googleapis.com/auth/calendar';
@@ -22,8 +33,10 @@ function checkAuth() {
 }
 
 /* Invoked by different functions to handle the result of authentication checks.*/
+var authData;
 function handleAuthResult(authResult) {
     console.log("Inside handleAuthResult ...");
+    authData = authResult;
     var authorizeButton = document.getElementById('authorize-button');
     var addButton = document.getElementById('addToCalendar');
     if (authResult && !authResult.error) {
@@ -39,64 +52,10 @@ function handleAuthResult(authResult) {
         }
 }
 
+
 /* Event handler that deals with clicking on the Authorize button.*/
 function handleAuthClick(event) {
     gapi.auth.authorize({client_id: clientId, scope: scopes, immediate: false},
                         handleAuthResult);
     return false;
-}
-
-/* End of PART 1 - Authentication Process. */
-/* Start of PART 2 - dealing with events from the user interface and
-performing API calls. */
-
-
-var addButton = document.getElementById('addToCalendar');
-addButton.onclick = function(){
-  var userChoices = getUserInput();
-  console.log(userChoices);
-  if (userChoices)
-    createEvent(userChoices);
-}
-
-function getUserInput(){
-
-  var date = document.querySelector("#date").value;
-  var startTime = document.querySelector("#start").value;
-  var endTime = document.querySelector("#end").value;
-  var eventDesc = document.querySelector("#event").value;
-
-  // check input values, they should not be empty
-  if (date=="" || startTime=="" || endTime=="" || eventDesc==""){
-    alert("All your input fields should have a meaningful value.");
-    return
-  }
-  else return {'date': date, 'startTime': startTime, 'endTime': endTime,
-               'eventTitle': eventDesc}
-}
-
-
-// Make an API call to create an event.  Give feedback to user.
-function createEvent(eventData) {
-  // First create resource that will be send to server.
-    var resource = {
-        "summary": eventData.eventTitle,
-        "start": {
-          "dateTime": new Date(eventData.date + " " + eventData.startTime).toISOString()
-        },
-        "end": {
-          "dateTime": new Date(eventData.date + " " + eventData.endTime).toISOString()
-          }
-        };
-    // create the request
-    var request = gapi.client.calendar.events.insert({
-      'calendarId': 'primary',
-      'resource': resource
-    });
-
-    // execute the request and do something with response
-    request.execute(function(resp) {
-      console.log(resp);
-      alert("Your event was added to the calendar.");
-    });
 }
