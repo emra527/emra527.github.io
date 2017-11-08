@@ -31,7 +31,7 @@
   <div class="form-group">
     <label for="inputDate3" class="col-lg-2 large control-label fontSize input-lg">Date</label>
     <div class="col-lg-8">
-      <input type="date" maxlength="6" class="form-control fontSize input-lg" id="inputDate3" placeholder="mm/dd/yyyy">
+      <input type="date" maxlength="6" class="form-control fontSize input-lg" id="inputDate3" placeholder="mm/dd/yyyy" required="required">
     </div>
     <!-- input tabindex="1" name="eventDate" value="mm/dd/yyyy" -->
   </div>
@@ -42,13 +42,13 @@
     <div class="col-lg-4">
       <div class="input-group bootstrap-timepicker timepicker">
         <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
-                <input id="timepicker1" type="time" class="form-control input-small fontSize input-lg">
+                <input id="timepicker1" type="time" class="form-control input-small fontSize input-lg" required="required">
       </div>
     </div>
     <div class="col-lg-4">
       <div class="input-group bootstrap-timepicker timepicker">
         <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
-                <input id="timepicker1" type="time" class="form-control input-small fontSize input-lg">
+                <input id="timepicker1" type="time" class="form-control input-small fontSize input-lg" required="required">
       </div>
     </div>
   </div>
@@ -58,7 +58,7 @@
   <div class="form-group">
     <label for="eventDesc3" class="col-lg-2 control-label fontSize input-lg">Event description</label>
     <div class="col-lg-8">
-      <textarea tabindex="3" cols="110" rows="6" name="eventDesc" class="fontSize input-lg">Enter event description here...</textarea>
+      <textarea tabindex="3" cols="110" rows="6" name="eventDesc" class="fontSize input-lg" required="required">Enter event description here...</textarea>
     </div>
   </div>
 
@@ -98,7 +98,7 @@
   <div class="form-group">
     <label for="reminders3" class="col-lg-2 control-label fontSize input-lg">Reminders</label>
     <div class="col-lg-6">
-      <input type="text" pattern="\d*" class="form-control fontSize input-lg" maxlength="2" id="reminders3" placeholder="30">&nbsp;
+      <input type="text" pattern="\d*" class="form-control fontSize input-lg" maxlength="2" id="reminders3" placeholder="30" required="required">&nbsp;
     </div>
     <div class="col-lg-1">
       <select name="eventReminderUnits" class="fontSize input-lg">
@@ -165,10 +165,10 @@
 
   <div class="form-group">
     <div class="col-lg-6" style="text-align: center">
-      <button type="submit" class="fontSize input-lg" value="Submit" tabindex="17" name="buttonCreate"><a href="index.html">Create Event</a></button>
+      <button type="button" class="fontSize input-lg" onclick="location.href='index.html';" tabindex="17" name="buttonCreate"><a href="index.html">Create Event</a></button>
     </div>
     <div class ="col-lg-6" style="text-align: center">
-      <button type="button" class="fontSize input-lg" value="Submit" tabindex="18" name="buttonCancel"><a href="index.html">Cancel</a></button>
+      <button type="button" class="fontSize input-lg" tabindex="18" name="buttonCancel" onclick="location.href='index.html';"><a href="index.html">Cancel</a></button>
     </div>
   </div>
 </form>
