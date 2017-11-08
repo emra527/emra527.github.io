@@ -27,7 +27,7 @@
         border: 5px solid black;
     }
 
-    input[type=text], input[type=password]{
+    input[type=email], input[type=password]{
         width: 80%;
         padding: 12px 20px;
         margin: 15px 0;
@@ -46,7 +46,7 @@
     }
 
     button {
-        background-color: lightgray;
+        background-color: teal;
         color: white;
         padding: 14px 20px;
         margin: 8px 0;
@@ -77,12 +77,12 @@
 
       <div class="container">
         <label class="fontSize input-lg"><b>Username:</b></label>
-        <input type="text" placeholder="Enter Username" name="uname" class="fontSize input-lg control-label" required>
+        <input type="email" placeholder="Enter Username" name="uname" class="fontSize input-lg control-label" required>
 
         <label class="fontSize input-lg control-label"><b>Password:</b></label>
         <input type="password" placeholder="Enter Password" name="psw" class="fontSize input-lg" required>
 
-        <button type="submit" class="fontSize input-lg"><a href="index.html">Login</a></button>
+        <button type="button" class="fontSize input-lg" onclick="location.href='index.html';">Login</button>
         <label for="forgot" class="fontSize input-lg" style= "background-color:lightgray; text-align:center; psw"> Forgot password?</label>
       </div>
     <form>
