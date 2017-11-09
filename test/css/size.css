@@ -1,0 +1,17 @@
+.fontSize {
+  font-size: 35px
+}
+
+.input-lg {
+  font-size: 35px
+}
+
+.input.search {
+  width:20em; height 4em;
+}
+
+.center{
+  left:50%;
+  text-align: center;
+  
+}

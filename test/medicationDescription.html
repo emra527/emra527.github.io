@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>Event details</title>
+  <meta charset="utf-8">
+  <!-- ensure proper rendering and touch zooming for mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+  <link	href="css/introHCI.css"	rel="stylesheet"
+  <link type="text/css" href="css/size.css" />
+
+  <script type="text/javascript" src="js/extra.js"></script>
+
+</head>
+
+<body>
+
+<div style="text-align: center;"><h1>Event details</h1></div>
+<!--form target="_self" enctype="text/plain" method="post" name="Event details"-->
+<form class="form-horizontal">
+  <form id="the-form" action="#">
+  <div class="form-group">
+    <label for="medicineName3" class="col-lg-2 large control-label fontSize input-lg">Medication Name</label>
+    <div class="col-lg-8">
+      <input type="text" class="form-control fontSize input-lg" id="nameMedicine3" placeholder="medication" required="required">
+    </div>
+    <!-- input tabindex="1" name="eventDate" value="mm/dd/yyyy" -->
+  </div>
+
+  <div class="form-group">
+    <label for="amount3" class="col-lg-2 control-label fontSize input-lg">Dosage</label>
+    <div class="col-lg-8">
+      <input type="text" class="form-control fontSize input-lg" id="amount3" placeholder="two tablets" required="required">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="inputTime3" class="col-lg-2 control-label fontSize input-lg">Time</label>
+    <div class="col-lg-8">
+      <input type="time" class="form-control fontSize input-lg" id="inputTime3" placeholder="hh:mm:PM" required="required">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-lg-2 control-label fontSize input-lg">Notification Type&nbsp;</label>
+    <div class="col-lg-9">
+      <label class="radio-inline control-label fontSize input-lg">
+        <input type="radio" checked="checked" name="eventNotification" value="notifVibrate" type="radio">Vibrate
+      </label>
+      <label class="radio-inline control-label fontSize input-lg">
+        <input type="radio" name="eventNotification" value="notifSilent" type="radio">Silent
+      </label>
+      <label class="radio-inline control-label fontSize input-lg">
+        <input type="radio" name="eventNotification" value="notifSound" type="radio">Sound
+      </label>
+      <label class="radio-inline control-label fontSize input-lg">
+        <input type="radio" name="eventNotification" value="notifBoth" type="radio">Vibrate and Sound
+      </label>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-lg-2 control-label fontSize input-lg">Days per week&nbsp;</label>
+    <div class="col-lg-8">
+      <label class="radio-inline control-label fontSize input-lg">
+        <input type="radio" checked="checked" value="sun" type="radio">Sunday
+      </label>
+      <label class="radio-inline control-label fontSize input-lg">
+        <input type="radio" value="mon" type="radio">Monday
+      </label>
+      <label class="radio-inline control-label fontSize input-lg">
+        <input type="radio" value="tues" type="radio">Tuesday
+      </label>
+      <label class="radio-inline control-label fontSize input-lg">
+        <input type="radio" value="wed" type="radio">Wednesday
+      </label>
+      <label class="radio-inline control-label fontSize input-lg">
+        <input type="radio"value="thurs" type="radio">Thursday
+      </label>
+      <label class="radio-inline control-label fontSize input-lg">
+        <input type="radio" value="fri" type="radio">Friday
+      </label>
+      <label class="radio-inline control-label fontSize input-lg">
+        <input type="radio" value="sat" type="radio">Saturday
+      </label>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="reminders3" class="col-lg-2 control-label fontSize input-lg">Reminders</label>
+    <div class="col-lg-6">
+      <input type="number" maxlength="2" class="form-control fontSize input-lg" size="2" id="reminders3" placeholder="30" required="required">&nbsp;
+    </div>
+    <div class="col-lg-1">
+      <select name="eventReminderUnits" class="fontSize input-lg">
+        <option selected="selected">minutes before</option>
+        <option>hours before</option>
+        <option>days before</option>
+        <option label="Reminder">weeks before</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="colors3" class="col-lg-2 control-label fontSize input-lg">Color&nbsp;</label>
+    <div class="col-lg-8">
+      <table style="text-align: left; width: 100px;" border="1" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="text-align: center;" valign="undefined">
+              <table style="text-align: left; margin-left: auto; margin-right: auto; width: 82px; height: 52px;" border="1" cellpadding="2" cellspacing="2">
+                <tbody>
+                  <tr>
+                    <td style="background-color: red;" align="undefined" valign="undefined"></td>
+                  </tr>
+                </tbody>
+              </table>
+              <input checked="checked" tabindex="10" name="eventColor" value="colorRed" type="radio">
+            </td>
+            <td align="undefined" valign="undefined">
+              <table style="text-align: left; margin-left: auto; margin-right: auto; width: 82px; height: 52px;" border="1" cellpadding="2" cellspacing="2">
+                <tbody>
+                  <tr>
+                    <td style="background-color: rgb(51, 255, 51);" align="undefined" valign="undefined"></td>
+                  </tr>
+                </tbody>
+              </table>
+              <div style="text-align: center;"><input tabindex="11" name="eventColor" value="colorRed" type="radio"></div>
+            </td>
+            <td align="undefined" valign="undefined">
+              <table style="text-align: left; margin-left: auto; margin-right: auto; width: 82px; height: 52px;" border="1" cellpadding="2" cellspacing="2">
+                <tbody>
+                  <tr>
+                    <td style="background-color: rgb(0, 0, 153);" align="undefined" valign="undefined"></td>
+                  </tr>
+                </tbody>
+              </table>
+              <div style="text-align: center;"><input tabindex="12" name="eventColor" value="colorRed" type="radio"></div>
+            </td>
+            <td align="undefined" valign="undefined">
+              <table style="text-align: left; margin-left: auto; margin-right: auto; width: 82px; height: 52px;" border="1" cellpadding="2" cellspacing="2">
+                <tbody>
+                  <tr>
+                    <td style="background-color: yellow;" align="undefined" valign="undefined"></td>
+                  </tr>
+                </tbody>
+              </table>
+              <div style="text-align: center;"><input tabindex="13" name="eventColor" value="colorRed" type="radio"></div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+    </div>
+    </div>
+    <div class="form-group">
+      <div class="col-lg-6" style="text-align: center">
+        <button id="subBtn" type="button" class="fontSize input-lg" tabindex="17" name="buttonCreate" onclick="location.href='index.html';"><a href="index.html">Create Medication Reminder</a></button>
+      </div>
+      <div class ="col-lg-6" style="text-align: center">
+        <button type="button" class="fontSize input-lg" tabindex="18" name="buttonCancel" onclick="location.href='index.html';"><a href="index.html">Cancel</a></button>
+      </div>
+    </div>
+  </form>
+  </form>
+<!--div>NOTE: The buttons above do not work yet. Both would return to the main calendar page performing different functions. <big><big><big><a href="index.html">Click here</a></big></big></big> to return to the calendar page.</div-->
+</body></html>

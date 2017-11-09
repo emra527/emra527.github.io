@@ -1,0 +1,110 @@
+<html lang="en">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="778372626385-j7c6vomqimpqkc8l1q0vqfqcum6g2d13.apps.googleusercontent.com">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link type="text/css" href="css/bootstrap.min.css" />
+    <link type="text/css" href="css/bootstrap-theme.min.css" />
+    <link type="text/css" href="css/size.css" />
+    <link	href="css/introHCI.css"	rel="stylesheet"
+
+    <!--Bootstrap Timepicker Installation-->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    <style>
+
+    form {
+        border: 5px solid black;
+    }
+
+    input[type=email], input[type=password]{
+        width: 80%;
+        padding: 12px 20px;
+        margin: 15px 0;
+        display: inline-block;
+        border: 1px solid lightgray;
+        box-sizing: border-box;
+    }
+
+    label[for=forgot]{
+      width: 100%;
+      padding: 12px 20px;
+      margin: 15px 0;
+      display: inline-block;
+      border: 1px solid lightgray;
+      box-sizing: border-box;
+    }
+
+    button {
+        background-color: teal;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    button:hover {
+        opacity: 0.8;
+    }
+
+    .container {
+        padding: 30px;
+    }
+
+    h1{
+      padding: 20px 0px 50px 0px;
+    }
+
+    }
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align:center"><b>Login&nbsp;<b></h1>
+
+    <form>
+
+      <div class="container">
+        <label class="fontSize input-lg"><b>Username:</b></label>
+        <input type="email" placeholder="Enter Username" name="uname" class="fontSize input-lg control-label" required>
+
+        <label class="fontSize input-lg control-label"><b>Password:</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" class="fontSize input-lg" required>
+
+        <button type="button" class="fontSize input-lg" onclick="location.href='index.html';">Login</button>
+        <label for="forgot" class="fontSize input-lg" style= "background-color:lightgray; text-align:center; psw"> Forgot password?</label>
+      </div>
+    <form>
+
+<!--
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <script>
+      function onSignIn(googleUser) {
+        // Useful data for your client-side scripts:
+        var profile = googleUser.getBasicProfile();
+        console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+        console.log('Full Name: ' + profile.getName());
+        console.log('Given Name: ' + profile.getGivenName());
+        console.log('Family Name: ' + profile.getFamilyName());
+        console.log("Image URL: " + profile.getImageUrl());
+        console.log("Email: " + profile.getEmail());
+
+        // The ID token you need to pass to your backend:
+        var id_token = googleUser.getAuthResponse().id_token;
+        console.log("ID Token: " + id_token);
+      };
+    </script>
+  -->
+  </body>
+</html>

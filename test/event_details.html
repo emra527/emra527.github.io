@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+    <title>Event details</title>
+
+</head>
+
+<body>
+    <div style="text-align: center;">Event details</div>
+    <form target="_self" enctype="text/plain" method="post" name="Event details">
+        <div><label>Date</label><input tabindex="1" name="eventDate" value="mm/dd/yyyy"></div>
+        <div><label>Time</label><input tabindex="2" name="eventTime" value="hh:mm"></div>
+        <div><label>Event description</label><textarea tabindex="3" cols="80" rows="3" name="eventDesc">Enter
+event description here...</textarea></div>
+        <div style="text-align: left;">Priority&nbsp;<input checked="checked" tabindex="3" name="eventPriority" value="priorityHigh" type="radio">High
+            <input tabindex="4" name="eventPriority" value="priorityMed" type="radio">Medium
+            <input tabindex="5" name="eventPriority" value="priorityLow" type="radio">Low
+        </div>
+        <div style="text-align: left;">Notification type&nbsp;
+            <input checked="checked" tabindex="6" name="eventNotification" value="notifNone" type="radio">None
+            <input tabindex="7" name="eventNotification" value="notifVibrate" type="radio">Vibrate only
+            <input tabindex="8" name="eventNotification" value="notifSound" type="radio">Alarm sound only
+            <input tabindex="9" name="eventNotification" value="notifBoth" type="radio">Both
+        </div>
+        <div style="text-align: left;">Reminder: <input maxlength="2" size="2" tabindex="11" name="eventReminderNumber" value="30">&nbsp;
+            <select name="eventReminderUnits"><option selected="selected">minutes before</option><option>hours before</option><option>days before</option><option label="Reminder:">weeks before</option></select>
+        </div>
+        <div>Color&nbsp;
+            <table style="text-align: left; width: 100px;" border="1" cellpadding="2" cellspacing="2">
+                <tbody>
+                    <tr>
+                        <td style="text-align: center;" valign="undefined">
+                            <table style="text-align: left; margin-left: auto; margin-right: auto; width: 62px; height: 32px;" border="1" cellpadding="2" cellspacing="2">
+                                <tbody>
+                                    <tr>
+                                        <td style="background-color: red;" align="undefined" valign="undefined"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <input checked="checked" tabindex="10" name="eventColor" value="colorRed" type="radio">
+                        </td>
+                        <td align="undefined" valign="undefined">
+                            <table style="text-align: left; margin-left: auto; margin-right: auto; width: 62px; height: 32px;" border="1" cellpadding="2" cellspacing="2">
+                                <tbody>
+                                    <tr>
+                                        <td style="background-color: rgb(51, 255, 51);" align="undefined" valign="undefined"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div style="text-align: center;"><input tabindex="11" name="eventColor" value="colorRed" type="radio">
+                            </div>
+                        </td>
+                        <td align="undefined" valign="undefined">
+                            <table style="text-align: left; margin-left: auto; margin-right: auto; width: 62px; height: 32px;" border="1" cellpadding="2" cellspacing="2">
+                                <tbody>
+                                    <tr>
+                                        <td style="background-color: rgb(0, 0, 153);" align="undefined" valign="undefined"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div style="text-align: center;"><input tabindex="12" name="eventColor" value="colorRed" type="radio">
+                            </div>
+                        </td>
+                        <td align="undefined" valign="undefined">
+                            <table style="text-align: left; margin-left: auto; margin-right: auto; width: 62px; height: 32px;" border="1" cellpadding="2" cellspacing="2">
+                                <tbody>
+                                    <tr>
+                                        <td style="background-color: yellow;" align="undefined" valign="undefined"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div style="text-align: center;"><input tabindex="13" name="eventColor" value="colorRed" type="radio">
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+        </div>
+        <div><button type="submit" value="Submit" tabindex="17" name="buttonCreate">Create event</button><button type="submit" value="Submit" tabindex="18" name="buttonCancel">Go back to calendar</button>
+        </div>
+    </form>
+    <div>NOTE: The buttons above do not work yet. Both would return to the main calendar page performing different functions. <big><big><big><a href="index.html">Click here</a></big></big>
+        </big> to return to the calendar page.</div>
+</body>
+
+</html>
