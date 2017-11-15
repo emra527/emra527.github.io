@@ -18,8 +18,8 @@
 
     <!--Bootstrap Timepicker Installation-->
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
-
     <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script type="text/javascript" src="js/extra.js"></script>
 
     <style>
 
@@ -77,13 +77,13 @@
 
       <div class="container">
         <label class="fontSize input-lg"><b>Username:</b></label>
-        <input type="email" placeholder="Enter Username" name="uname" class="fontSize input-lg control-label" required>
-
+        <input type="email" placeholder="Enter Username" id="username" class="fontSize input-lg control-label" required>
+        <span id ="usernameError"></span>
         <label class="fontSize input-lg control-label"><b>Password:</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" class="fontSize input-lg" required>
-
-        <button type="button" class="fontSize input-lg" onclick="location.href='index.html';">Login</button>
-        <label for="forgot" class="fontSize input-lg" style= "background-color:lightgray; text-align:center; psw"> Forgot password?</label>
+        <input type="password" placeholder="Enter Password" id="passWord" class="fontSize input-lg" required>
+        <span id ="passwordError"></span>
+        <button type="button" class="fontSize input-lg" onclick="validate()">Login</button>
+        <!--label for="forgot" class="fontSize input-lg" style= "background-color:lightgray; text-align:center; psw"> Forgot password?</label=-->
       </div>
     <form>
 

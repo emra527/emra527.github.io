@@ -24,11 +24,12 @@
 <div style="text-align: center;"><h1>Event details</h1></div>
 <!--form target="_self" enctype="text/plain" method="post" name="Event details"-->
 <form class="form-horizontal">
-  <form id="the-form" action="#">
+  <!--<form id="the-form" action="#">-->
   <div class="form-group">
     <label for="medicineName3" class="col-lg-2 large control-label fontSize input-lg">Medication Name</label>
     <div class="col-lg-8">
       <input type="text" class="form-control fontSize input-lg" id="nameMedicine3" placeholder="medication" required="required">
+      <span id = "medNameError"></span>
     </div>
     <!-- input tabindex="1" name="eventDate" value="mm/dd/yyyy" -->
   </div>
@@ -37,6 +38,7 @@
     <label for="amount3" class="col-lg-2 control-label fontSize input-lg">Dosage</label>
     <div class="col-lg-8">
       <input type="text" class="form-control fontSize input-lg" id="amount3" placeholder="two tablets" required="required">
+      <span id = "medAmountError"></span>
     </div>
   </div>
 
@@ -44,6 +46,7 @@
     <label for="inputTime3" class="col-lg-2 control-label fontSize input-lg">Time</label>
     <div class="col-lg-8">
       <input type="time" class="form-control fontSize input-lg" id="inputTime3" placeholder="hh:mm:PM" required="required">
+      <span id = "medTimeError"></span>
     </div>
   </div>
 
@@ -96,6 +99,7 @@
     <label for="reminders3" class="col-lg-2 control-label fontSize input-lg">Reminders</label>
     <div class="col-lg-6">
       <input type="number" maxlength="2" class="form-control fontSize input-lg" size="2" id="reminders3" placeholder="30" required="required">&nbsp;
+      <span id = "medReminderError"></span>
     </div>
     <div class="col-lg-1">
       <select name="eventReminderUnits" class="fontSize input-lg">
@@ -161,13 +165,13 @@
     </div>
     <div class="form-group">
       <div class="col-lg-6" style="text-align: center">
-        <button id="subBtn" type="button" class="fontSize input-lg" tabindex="17" name="buttonCreate" onclick="location.href='index.html';"><a href="index.html">Create Medication Reminder</a></button>
+        <button id="subBtn" type="button" class="fontSize input-lg" tabindex="17" name="buttonCreate" onclick="medFunction()">Create Medication Reminder</button>
       </div>
       <div class ="col-lg-6" style="text-align: center">
-        <button type="button" class="fontSize input-lg" tabindex="18" name="buttonCancel" onclick="location.href='index.html';"><a href="index.html">Cancel</a></button>
+        <button type="button" class="fontSize input-lg" tabindex="18" name="buttonCancel" onclick="location.href='index.html';">Cancel</button>
       </div>
     </div>
-  </form>
+  <!--</form>-->
   </form>
 <!--div>NOTE: The buttons above do not work yet. Both would return to the main calendar page performing different functions. <big><big><big><a href="index.html">Click here</a></big></big></big> to return to the calendar page.</div-->
 </body></html>
