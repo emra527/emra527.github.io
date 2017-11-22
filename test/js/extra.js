@@ -57,7 +57,7 @@ function validate() {
 
 }
 function checkEventDate(){
-  if(document.getElementById('inputDate3').value=='' || !document.getElementById('inputDate3').value.length){
+  if(document.getElementById('dateStart').value=='' || !document.getElementById('dateStart').value.length){
       document.getElementById('eventDateError').innerText="Required";
       document.getElementById('eventDateError').style.color="red";
       return false
@@ -69,7 +69,7 @@ function checkEventDate(){
 }
 
 function checkEventStartTime(){
-  if(document.getElementById('timepicker1').value=='' || !document.getElementById('timepicker1').value.length){
+  if(document.getElementById('timeStart').value=='' || !document.getElementById('timeStart').value.length){
       document.getElementById('eventTimeError').innerText="Required";
       document.getElementById('eventTimeError').style.color="red";
       return false
@@ -81,11 +81,24 @@ function checkEventStartTime(){
 }
 
 function checkEventEndTime(){
-  if(document.getElementById('timepicker2').value=='' || !document.getElementById('timepicker2').value.length){
+  var str1 = document.getElementById('timeEnd').value
+  var str2 = document.getElementById('timeStart').value
+  str1 = str1.replace (/:/g, "");
+  str2 = str2.replace (/:/g, "");
+  var result1 = parseFloat(str1);
+  var result2 = parseFloat(str2);
+
+  if(document.getElementById('timeEnd').value=='' || !document.getElementById('timeEnd').value.length){
       document.getElementById('eventTimeError2').innerText="Required";
       document.getElementById('eventTimeError2').style.color="red";
       return false
   }
+  else if (result1 < result2){
+        document.getElementById('eventTimeError2').innerText="Invalid End Time";
+        document.getElementById('eventTimeError2').style.color="red";
+        return false
+  }
+
   else{
     document.getElementById('eventTimeError2').innerText="";
     return true
@@ -164,5 +177,4 @@ function checkMedReminder(){
     return true
   }
 }
-
 //$("#validate").bind("click", validate);

@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>Event details</title>
+    <meta charset="utf-8">
+    <!-- ensure proper rendering and touch zooming for mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Timepicker -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script src="https://jonthornton.github.io/jquery-timepicker/jquery.timepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://jonthornton.github.io/jquery-timepicker/jquery.timepicker.css" />
+
+    <script src="js/bootstrap-datepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-datepicker.standalone.css" />
+
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/ui-lightness/jquery-ui.css" type="text/css" media="all" />
+
+    <script src="js/datepair.js"></script>
+    <script src="js/jquery.datepair.js"></script>
+      <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link type="text/css" href="css/bootstrap.min.css" />
+    <link type="text/css" href="css/bootstrap-theme.min.css" />
+    <link type="text/css" href="css/size.css" />
+
+    <!--Bootstrap Timepicker Installation-->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/extra.js"></script>
+  </head>
+
+<body>
+
+<div style="text-align: center; font-size:40px"><h1>Event details</h1></div>
+<!--form target="_self" enctype="text/plain" method="post" name="Event details"-->
+<form class="form-horizontal">
+<form onSubmit="return false;">
+
+  <div class="form-group">
+    <label for="dateStart" class="col-lg-2 large control-label fontSize input-lg">Date</label>
+    <div class="col-lg-8">
+      <p id="eventRange">
+        <input type="text" class="form-control fontSize input-lg date start" id="dateStart" placeholder="mm/dd/yyyy">
+        <span id = "eventDateError"></span>
+      </p>
+    </div>
+  </div>
+
+  <!-- timepicker script not working -->
+  <div class="form-group">
+    <label for="timeStart" class="col-lg-2 large control-label fontSize input-lg">Time Start</label>
+    <div class="col-lg-8">
+      <p id="eventRange">
+        <input type="text" id="timeStart" class="form-control fontSize input-lg time start" placeholder="1:30"></label>
+        <span id = "eventTimeError"></span>
+      </p>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="timeEnd" class="col-lg-2 large control-label fontSize input-lg">Time End</label>
+    <div class="col-lg-8">
+      <p id="eventRange">
+        <input type="text" id="timeEnd" class="form-control fontSize input-lg time end" placeholder="4:30"></label>
+        <span id = "eventTimeError2"></span>
+      </p>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="eventDesc3" class="col-lg-2 control-label fontSize input-lg">Event description</label>
+    <div class="col-lg-8">
+      <textarea tabindex="3" id="eventDescription" cols="110" rows="3" name="eventDesc" class="fontSize input-lg" required="required" placeholder="Enter event description here..."></textarea>
+      <span id = "eventDescriptionError"></span>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="priority3" class="col-lg-2 control-label fontSize input-lg">Priority&nbsp;</label>
+    <div class="col-lg-8">
+      <label class="radio-inline control-label fontSize input-lg">
+        <input checked="checked" name="eventPriority" value="priorityHigh" type="radio">High
+      </label>
+      <label class="radio-inline control-label fontSize input-lg">
+        <input name="eventPriority" value="priorityMed" type="radio">Medium
+      </label>
+      <label class="radio-inline control-label fontSize input-lg">
+        <input name="eventPriority" value="priorityLow" type="radio">Low
+      </label>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-lg-2 control-label fontSize input-lg">Notification Type&nbsp;</label>
+    <div class="col-lg-8">
+      <label class="radio-inline control-label fontSize input-lg">
+        <input type="radio" checked="checked" name="eventNotification" value="notifVibrate" type="radio">Vibrate
+      </label>
+      <label class="radio-inline control-label fontSize input-lg">
+        <input type="radio" name="eventNotification" value="notifSilent" type="radio">Silent
+      </label>
+      <label class="radio-inline control-label fontSize input-lg">
+        <input type="radio" name="eventNotification" value="notifSound" type="radio">Sound
+      </label>
+      <label class="radio-inline control-label fontSize input-lg">
+        <input type="radio" name="eventNotification" value="notifBoth" type="radio">Vibrate and Sound
+      </label>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="reminders3" class="col-lg-2 control-label fontSize input-lg">Reminders</label>
+    <div class="col-lg-6">
+      <input type="text" pattern="\d*" class="form-control fontSize input-lg" maxlength="2" id="eventReminders3" placeholder="30" required="required">&nbsp;
+      <span id="eventReminderError"></span>
+    </div>
+    <div class="col-lg-1">
+      <select name="eventReminderUnits" class="fontSize input-lg">
+        <option selected="selected">minutes before</option>
+        <option>hours before</option>
+        <option>days before</option>
+        <option>weeks before</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="colors3" class="col-lg-2 control-label fontSize input-lg">Color&nbsp;</label>
+    <div class="col-lg-8">
+      <table style="text-align: left; width: 100px;" border="1" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="text-align: center;" valign="undefined">
+              <table style="text-align: left; margin-left: auto; margin-right: auto; width: 82px; height: 52px;" border="1" cellpadding="2" cellspacing="2">
+                <tbody>
+                  <tr>
+                    <td style="background-color: red;" align="undefined" valign="undefined"></td>
+                  </tr>
+                </tbody>
+              </table>
+              <input checked="checked" tabindex="10" name="eventColor" value="colorRed" type="radio">
+            </td>
+            <td align="undefined" valign="undefined">
+              <table style="text-align: left; margin-left: auto; margin-right: auto; width: 82px; height: 52px;" border="1" cellpadding="2" cellspacing="2">
+                <tbody>
+                  <tr>
+                    <td style="background-color: rgb(51, 255, 51);" align="undefined" valign="undefined"></td>
+                  </tr>
+                </tbody>
+              </table>
+              <div style="text-align: center;"><input tabindex="11" name="eventColor" value="colorRed" type="radio"></div>
+            </td>
+            <td align="undefined" valign="undefined">
+              <table style="text-align: left; margin-left: auto; margin-right: auto; width: 82px; height: 52px;" border="1" cellpadding="2" cellspacing="2">
+                <tbody>
+                  <tr>
+                    <td style="background-color: rgb(0, 0, 153);" align="undefined" valign="undefined"></td>
+                  </tr>
+                </tbody>
+              </table>
+              <div style="text-align: center;"><input tabindex="12" name="eventColor" value="colorRed" type="radio"></div>
+            </td>
+            <td align="undefined" valign="undefined">
+              <table style="text-align: left; margin-left: auto; margin-right: auto; width: 82px; height: 52px;" border="1" cellpadding="2" cellspacing="2">
+                <tbody>
+                  <tr>
+                    <td style="background-color: yellow;" align="undefined" valign="undefined"></td>
+                  </tr>
+                </tbody>
+              </table>
+              <div style="text-align: center;"><input tabindex="13" name="eventColor" value="colorRed" type="radio"></div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+    </div>
+    </div>
+
+  <div class="form-group">
+    <div class="col-lg-6" style="text-align: center">
+      <button type="button" class="fontSize input-lg" onclick="eventFunction()" tabindex="17" name="buttonCreate">Create Event</button>
+    </div>
+    <div class ="col-lg-6" style="text-align: center">
+      <button type="button" class="fontSize input-lg" tabindex="18" name="buttonCancel" onclick="location.href='index.html';">Cancel</button>
+    </div>
+  </div>
+</form>
+  </form>
+<!--div>NOTE: The buttons above do not work yet. Both would return to the main calendar page performing different functions. <big><big><big><a href="index.html">Click here</a></big></big></big> to return to the calendar page.</div-->
+<script src="js/calendar_ex.js"></script>
+<script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+
+<!-- Datepair script -->
+<script>
+var today = new Date('05 October 2011 14:48');
+
+console.log(today.toISOString());
+    $('#eventRange .time').timepicker({
+        'showDuration': true,
+        'timeFormat': 'G:i'
+    });
+
+    $('#eventRange .date').datepicker({
+        'format': 'dd MM yyyy',
+        'autoclose': true,
+        'todayBtn': true,
+        'todayHighlight': true
+    });
+
+    $('#eventRange').datepair();
+</script>
+</body></html>
