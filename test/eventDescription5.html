@@ -21,18 +21,111 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/extra.js"></script>
 
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110433331-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-110433331-1');
+    </script>
+
+
   </head>
 
+  <style>
+  .mypopup {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      padding-top: 100px; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  .popup-content {
+      background-color: #fefefe;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+  }
+
+  .close {
+      color: #aaaaaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+  }
+  </style>
+
 <body>
+
+  <button style="color:#2593E5; float: right;" id="pop"> Help </button>
+  <div id="helpPop" class="mypopup">
+    <div class="popup-content">
+      <span class="close">&times;</span>
+      <p style="font-size:20px">Date: Click on a date<br><br>
+        Time: Write in a starting time and an ending time<br><br>
+        Event Description: Write the type of event <br><br>
+        Priority: Click on a priority type<br><br>
+        Notification Type: Click on a type of notification to remind you<br><br>
+        Reminders: Write a time to remind you of the event along with the duration<br><br>
+        Color: Choose a color for the event to be displayed in<br><br>
+        Create Event: If all the fields are valid, it will add the event to the calendar, else will show red error text<br><br>
+        Cancel: Clicking this button will take you back to the home page
+      </p>
+    </div>
+  </div>
+
+  <script>
+  // Get the modal
+  var help = document.getElementById('helpPop');
+  // Get the button that opens the modal
+  var btn = document.getElementById("pop");
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks the button, open the modal
+  btn.onclick = function() {
+      help.style.display = "block";
+  }
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+      help.style.display = "none";
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+      if (event.target == help) {
+          help.style.display = "none";
+      }
+  }
+  </script>
 
 <div style="text-align: center; font-size:40px"><h1>Event details</h1></div>
 <!--form target="_self" enctype="text/plain" method="post" name="Event details"-->
 <form class="form-horizontal">
 <form onSubmit="return false;">
   <div class="form-group">
-    <label for="inputDate3" class="col-lg-2 large control-label fontSize input-lg">Date</label>
+    <label for="dateStart" class="col-lg-2 large control-label fontSize input-lg">Date</label>
     <div class="col-lg-8">
-      <input type="date" maxlength="6" class="form-control fontSize input-lg" id="inputDate3" placeholder="mm/dd/yyyy" required="required">
+      <input type="date" maxlength="6" class="form-control fontSize input-lg" id="dateStart" placeholder="mm/dd/yyyy" required="required">
       <span id = "eventDateError"></span>
     </div>
     <!-- input tabindex="1" name="eventDate" value="mm/dd/yyyy" -->
@@ -40,18 +133,18 @@
 
   <!-- timepicker script not working -->
   <div class="form-group">
-    <label for="inputTime2" class="col-lg-2 control-label fontSize input-lg">Time</label>
+    <label for="timeStart" class="col-lg-2 control-label fontSize input-lg">Time</label>
     <div class="col-lg-4">
-      <div class="input-group bootstrap-timepicker timepicker">
+      <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
-            <input id="timepicker1" type="time" class="form-control input-small fontSize input-lg" required="required">
+            <input id="timeStart" type="time" class="form-control input-small fontSize input-lg" required="required">
             <span id = "eventTimeError"></span>
       </div>
     </div>
     <div class="col-lg-4">
-      <div class="input-group bootstrap-timepicker timepicker">
+      <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
-          <input id="timepicker2" type="time" class="form-control input-small fontSize input-lg" required="required">
+          <input id="timeEnd" type="time" class="form-control input-small fontSize input-lg" required="required">
           <span id = "eventTimeError2"></span>
       </div>
     </div>
@@ -171,10 +264,10 @@
 
   <div class="form-group">
     <div class="col-lg-6" style="text-align: center">
-      <button type="button" class="fontSize input-lg" onclick="eventFunction()" tabindex="17" name="buttonCreate">Create Event</button>
+      <button type="button" class="fontSize input-lg" onclick="eventFunction()" tabindex="17" name="buttonCreate" style="color:#2593E5">Create Event</button>
     </div>
     <div class ="col-lg-6" style="text-align: center">
-      <button type="button" class="fontSize input-lg" tabindex="18" name="buttonCancel" onclick="location.href='index.html';">Cancel</button>
+      <button type="button" class="fontSize input-lg" tabindex="18" name="buttonCancel" onclick="location.href='index.html';" style="color:#2593E5">Cancel</button>
     </div>
   </div>
 </form>

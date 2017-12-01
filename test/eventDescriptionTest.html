@@ -69,22 +69,32 @@
 }
 </style>
 
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110433331-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-110433331-1');
+</script>
   </head>
 
 <body>
-<button style="float: right;" id="pop"> Help </button>
+<button style="color:#2593E5; float: right;" id="pop"> Help </button>
 <div id="helpPop" class="mypopup">
   <div class="popup-content">
     <span class="close">&times;</span>
-    <p class="fontSize">Date: Click on a date<br><br>
-      Time: Click on a starting time and an ending time<br><br>
+    <p style="font-size:20px">Date: Click on a date<br><br>
+      Time: Write in a starting time and an ending time<br><br>
       Event Description: Write the type of event <br><br>
       Priority: Click on a priority type<br><br>
       Notification Type: Click on a type of notification to remind you<br><br>
       Reminders: Write a time to remind you of the event along with the duration<br><br>
       Color: Choose a color for the event to be displayed in<br><br>
       Create Event: If all the fields are valid, it will add the event to the calendar, else will show red error text<br><br>
-      Cancel: Clicking this button will take you back to the home page<br><br>
+      Cancel: Clicking this button will take you back to the home page
     </p>
   </div>
 </div>
@@ -119,7 +129,7 @@ window.onclick = function(event) {
 <!--form target="_self" enctype="text/plain" method="post" name="Event details"-->
 <form class="form-horizontal">
 <form onSubmit="return false;">
-
+<!--
   <div class="form-group">
     <label for="dateStart" class="col-lg-2 large control-label fontSize input-lg">Date</label>
     <div class="col-lg-8">
@@ -129,8 +139,35 @@ window.onclick = function(event) {
       </p>
     </div>
   </div>
+-->
+  <div class="form-group">
+    <label for="dateStart" class="col-lg-2 large control-label fontSize input-lg">Date</label>
+    <div class="col-lg-8">
+      <input type="date" maxlength="6" class="form-control fontSize input-lg" id="dateStart" placeholder="mm/dd/yyyy" required="required">
+      <span id = "eventDateError"></span>
+    </div>
+    <!-- input tabindex="1" name="eventDate" value="mm/dd/yyyy" -->
+  </div>
+
+  <div class="form-group">
+    <label for="timeStart" class="col-lg-2 large control-label fontSize input-lg">Time Start</label>
+    <div class="col-lg-8">
+        <input type="time" id="timeStart" class="form-control fontSize input-lg time start" placeholder="1:30"></label>
+        <span id = "eventTimeError"></span>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="timeEnd" class="col-lg-2 large control-label fontSize input-lg">Time End</label>
+    <div class="col-lg-8">
+        <input type="time" id="timeEnd" class="form-control fontSize input-lg time end" placeholder="4:30"></label>
+        <span id = "eventTimeError2"></span>
+    </div>
+  </div>
+
 
   <!-- timepicker script not working -->
+  <!--
   <div class="form-group">
     <label for="timeStart" class="col-lg-2 large control-label fontSize input-lg">Time Start</label>
     <div class="col-lg-8">
@@ -150,6 +187,9 @@ window.onclick = function(event) {
       </p>
     </div>
   </div>
+-->
+
+
 
   <div class="form-group">
     <label for="eventDesc3" class="col-lg-2 control-label fontSize input-lg">Event description</label>
@@ -263,19 +303,21 @@ window.onclick = function(event) {
 
   <div class="form-group">
     <div class="col-lg-6" style="text-align: center">
-      <button type="button" class="fontSize input-lg" onclick="eventFunction()" tabindex="17" name="buttonCreate">Create Event</button>
+      <button type="button" class="fontSize input-lg" onclick="eventFunction()" style="color:#2593E5" tabindex="17" name="buttonCreate">Create Event</button>
     </div>
     <div class ="col-lg-6" style="text-align: center">
-      <button type="button" class="fontSize input-lg" tabindex="18" name="buttonCancel" onclick="location.href='index.html';">Cancel</button>
+      <button type="button" class="fontSize input-lg" tabindex="18" style="color:#2593E5" name="buttonCancel" onclick="location.href='index.html';">Cancel</button>
     </div>
   </div>
 </form>
   </form>
 <!--div>NOTE: The buttons above do not work yet. Both would return to the main calendar page performing different functions. <big><big><big><a href="index.html">Click here</a></big></big></big> to return to the calendar page.</div-->
+<!--
 <script src="js/calendar_ex.js"></script>
 <script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
-
+-->
 <!-- Datepair script -->
+<!--
 <script>
 var today = new Date('05 October 2011 14:48');
 
@@ -294,4 +336,5 @@ console.log(today.toISOString());
 
     $('#eventRange').datepair();
 </script>
+-->
 </body></html>
