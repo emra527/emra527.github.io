@@ -2,6 +2,10 @@
   font-size: 35px
 }
 
+.fontMed {
+  font-size: 25px
+}
+
 .input-lg {
   font-size: 35px
 }
@@ -13,5 +17,5 @@
 .center{
   left:50%;
   text-align: center;
-  
+
 }
