@@ -10,9 +10,11 @@ function medFunction(){
 }
 
 function eventFunction(){
-  console.log("create event button clicked")
-  tracker = ga.getAll()[0]
-  tracker.send('event', 'finish', 'click')
+  $(".buttonCreate").click(function(){
+    console.log("create event button clicked")
+    tracker = ga.getAll()[0]
+    tracker.send('event', 'button', 'click')
+  });
   checkEventDate();
   checkEventStartTime();
   checkEventEndTime();

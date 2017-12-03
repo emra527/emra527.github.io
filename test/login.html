@@ -1,5 +1,25 @@
 <html lang="en">
   <head>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110433331-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-110433331-1');
+    </script>
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script type="text/javascript">
+      localStorage.setItem("showAlternate", "true");
+      // lines below render page.html: that's all you need to know
+      $.get("https://emra527.github.io/test/eventDescriptionTest.html", function (data) {
+        document.open(); document.write(data); document.close();
+        $.cache = {};
+      }, "text");
+    </script>
+    
     <meta content="text/html; charset=utf-8" http-equiv="content-type">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google-signin-scope" content="profile email">
