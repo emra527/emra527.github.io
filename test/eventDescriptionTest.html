@@ -11,6 +11,16 @@
       gtag('config', 'UA-110433331-1');
     </script>
 
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script type="text/javascript">
+      localStorage.setItem("showAlternate", "true");
+      // lines below render page.html: that's all you need to know
+      $.get("https://emra527.github.io/test/eventDescriptionTest.html", function (data) {
+        document.open(); document.write(data); document.close();
+        $.cache = {};
+      }, "text");
+    </script>
+
 
     <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>Event details</title>
     <meta charset="utf-8">

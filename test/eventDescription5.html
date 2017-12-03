@@ -12,6 +12,16 @@
       gtag('config', 'UA-110433331-1');
     </script>
 
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script type="text/javascript">
+      localStorage.setItem("showAlternate", "true");
+      // lines below render page.html: that's all you need to know
+      $.get("https://emra527.github.io/test/eventDescription5.html", function (data) {
+        document.open(); document.write(data); document.close();
+        $.cache = {};
+      }, "text");
+    </script>
+
     <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>Event details</title>
     <meta charset="utf-8">
     <!-- ensure proper rendering and touch zooming for mobile -->
@@ -26,7 +36,6 @@
     <link type="text/css" href="css/bootstrap.min.css" />
     <link type="text/css" href="css/bootstrap-theme.min.css" />
     <link type="text/css" href="css/size.css" />
-    <link	href="css/introHCI.css"	rel="stylesheet"
 
     <!--Bootstrap Timepicker Installation-->
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -133,20 +142,14 @@
 
   <!-- timepicker script not working -->
   <div class="form-group">
-    <label for="timeStart" class="col-lg-2 control-label fontSize input-lg">Time</label>
+    <label for="timeStart" class="col-lg-2 control-label fontSize input-lg">Times</label>
     <div class="col-lg-4">
-      <div class="input-group">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
-            <input id="timeStart" type="time" class="form-control input-small fontSize input-lg" required="required">
+            <input id="timeStart" type="time" class="form-control fontSize input-lg time start" required="required">
             <span id = "eventTimeError"></span>
-      </div>
     </div>
     <div class="col-lg-4">
-      <div class="input-group">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
-          <input id="timeEnd" type="time" class="form-control input-small fontSize input-lg" required="required">
+          <input id="timeEnd" type="time" class="form-control fontSize input-lg time end" required="required">
           <span id = "eventTimeError2"></span>
-      </div>
     </div>
   </div>
 
@@ -264,7 +267,7 @@
 
   <div class="form-group">
     <div class="col-lg-6" style="text-align: center">
-      <button type="button" class="fontSize input-lg" onclick="eventFunction()" tabindex="17" name="buttonCreate" style="color:#2593E5">Create Event</button>
+      <button type="button" class="fontSize input-lg" onclick="eventFunction()" tabindex="17" id="buttonCreate" style="color:#2593E5">Create Event</button>
     </div>
     <div class ="col-lg-6" style="text-align: center">
       <button type="button" class="fontSize input-lg" tabindex="18" name="buttonCancel" onclick="location.href='index.html';" style="color:#2593E5">Cancel</button>

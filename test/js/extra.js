@@ -10,6 +10,9 @@ function medFunction(){
 }
 
 function eventFunction(){
+  console.log("create event button clicked")
+  tracker = ga.getAll()[0]
+  tracker.send('event', 'finish', 'click')
   checkEventDate();
   checkEventStartTime();
   checkEventEndTime();
@@ -182,4 +185,5 @@ function popup(){
   var popup = document.getElementById('popup');
   popup.classList.toggle("show");
 }
+
 //$("#validate").bind("click", validate);
