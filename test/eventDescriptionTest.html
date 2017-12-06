@@ -131,7 +131,7 @@ window.onclick = function(event) {
 <!--form target="_self" enctype="text/plain" method="post" name="Event details"-->
 <form class="form-horizontal">
 <form onSubmit="return false;">
-<!--
+
   <div class="form-group">
     <label for="dateStart" class="col-lg-2 large control-label fontSize input-lg">Date</label>
     <div class="col-lg-8">
@@ -141,35 +141,8 @@ window.onclick = function(event) {
       </p>
     </div>
   </div>
--->
-  <div class="form-group">
-    <label for="dateStart" class="col-lg-2 large control-label fontSize input-lg">Date</label>
-    <div class="col-lg-8">
-      <input type="date" maxlength="6" class="form-control fontSize input-lg" id="dateStart" placeholder="mm/dd/yyyy" required="required">
-      <span id = "eventDateError"></span>
-    </div>
-    <!-- input tabindex="1" name="eventDate" value="mm/dd/yyyy" -->
-  </div>
-
-  <div class="form-group">
-    <label for="timeStart" class="col-lg-2 large control-label fontSize input-lg">Time Start</label>
-    <div class="col-lg-8">
-        <input type="time" id="timeStart" class="form-control fontSize input-lg time start" placeholder="1:30"></label>
-        <span id = "eventTimeError"></span>
-    </div>
-  </div>
-
-  <div class="form-group">
-    <label for="timeEnd" class="col-lg-2 large control-label fontSize input-lg">Time End</label>
-    <div class="col-lg-8">
-        <input type="time" id="timeEnd" class="form-control fontSize input-lg time end" placeholder="4:30"></label>
-        <span id = "eventTimeError2"></span>
-    </div>
-  </div>
 
 
-  <!-- timepicker script not working -->
-  <!--
   <div class="form-group">
     <label for="timeStart" class="col-lg-2 large control-label fontSize input-lg">Time Start</label>
     <div class="col-lg-8">
@@ -189,7 +162,6 @@ window.onclick = function(event) {
       </p>
     </div>
   </div>
--->
 
 
 
@@ -314,12 +286,12 @@ window.onclick = function(event) {
 </form>
   </form>
 <!--div>NOTE: The buttons above do not work yet. Both would return to the main calendar page performing different functions. <big><big><big><a href="index.html">Click here</a></big></big></big> to return to the calendar page.</div-->
-<!--
+
 <script src="js/calendar_ex.js"></script>
 <script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
--->
+
 <!-- Datepair script -->
-<!--
+
 <script>
 var today = new Date('05 October 2011 14:48');
 
@@ -338,5 +310,5 @@ console.log(today.toISOString());
 
     $('#eventRange').datepair();
 </script>
--->
+
 </body></html>

@@ -188,4 +188,10 @@ function popup(){
   popup.classList.toggle("show");
 }
 
+$(".submitBtn").click(function() {
+  console.log("submit button clicked"); // fix smart quote from slide!
+  // tracker code here, refer to slide #26 and #27
+  tracker = ga.getAll()[0];
+  tracker.send('event', 'submit', 'click');
+});
 //$("#validate").bind("click", validate);
